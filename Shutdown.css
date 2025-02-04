@@ -1,0 +1,82 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.container {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+    opacity: 1;
+}
+
+/* Keyframes for the dots' movement and separation */
+@keyframes orbit {
+    0%{
+        transform: rotate(-360deg) translate(60px);
+        opacity: 1;
+    }
+    100%{
+        transform:rotate(360deg)translate(60px) ;
+        opacity: 0;
+    }
+    
+}
+
+/* Apply animation to all containers with delays */
+.container:nth-child(1) {
+    animation: orbit 4s ease-in-out infinite;
+}
+.container:nth-child(2) {
+    animation: orbit 4s ease-in-out infinite;
+    animation-delay: 0.1s;
+}
+.container:nth-child(3) {
+    animation: orbit 4s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+.container:nth-child(4) {
+    animation: orbit 4s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+.container:nth-child(5) {
+    animation: orbit 4s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+.container:nth-child(6) {
+    animation: orbit 4s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+.container:nth-child(7) {
+    animation: orbit 4s ease-in-out infinite;
+    animation-delay: 0.6s;
+}
+.container:nth-child(8) {
+    animation: orbit 4s ease-in-out infinite;
+    animation-delay: 0.7s;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin-top: 20px;
+    position: relative;
+    top:-140px;
+}
